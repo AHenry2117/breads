@@ -1,14 +1,6 @@
-// const express = require('express')
-// const breads = express.Router()
-
-// // INDEX
-// breads.get('/', (req, res) => {
-//   res.send('This is the index at /breads')
-// })
-// module.exports = breads
-const express = require('express')
-const breads = express.Router()
-const Bread = require('../models/bread.js')
+const express = require('express');
+const breads = express.Router();
+const Bread = require('../models/bread.js');
 
 // INDEX
 breads.get('/', (req, res) => {
@@ -17,12 +9,12 @@ breads.get('/', (req, res) => {
       breads: Bread,
       title: "Index Page"
     }
-  )
-// res.send(Bread)
-})
+  );
+// res.send(Bread);
+});
 
 
-module.exports = breads
+module.exports = breads;
 // SHOW
 breads.get('/:arrayIndex', (req, res) => {
   res.send(Bread[req.params.arrayIndex])
